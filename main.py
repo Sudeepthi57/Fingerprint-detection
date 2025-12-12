@@ -28,14 +28,7 @@ else:
 # ============================================
 # IMAGE DATA GENERATOR
 # ============================================
-datagen = ImageDataGenerator(
-    rescale=1./255,
-    validation_split=0.2,
-    rotation_range=20,
-    width_shift_range=0.2,
-    height_shift_range=0.2,
-    horizontal_flip=True
-)
+
 
 train_gen = datagen.flow_from_directory(
     DATASET_PATH,
